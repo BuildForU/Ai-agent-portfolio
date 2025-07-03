@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { LavaLamp } from "@/components/ui/fluid-blob";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -9,8 +10,13 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-hero-gradient-start to-hero-gradient-end pt-16 flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-hero-gradient-start to-hero-gradient-end pt-16 flex items-center">
+      {/* Fluid Blob Background */}
+      <div className="absolute inset-0 opacity-10">
+        <LavaLamp />
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-primary mb-6 leading-tight animate-fade-in">
