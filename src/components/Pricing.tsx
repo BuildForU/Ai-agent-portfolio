@@ -78,10 +78,10 @@ const Pricing = () => {
                 pkg.popular ? 'scale-105' : ''
               }`}
             >
-              {/* Animated Border for Popular Package */}
+              {/* Static Border for Popular Package */}
               {pkg.popular && (
                 <div className="absolute inset-0 rounded-2xl">
-                  <div className="absolute inset-[-2px] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] rounded-2xl" />
+                  <div className="absolute inset-[-2px] bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-2xl" />
                   <div className="absolute inset-0 bg-white dark:bg-gray-950 rounded-2xl" />
                 </div>
               )}
@@ -139,17 +139,12 @@ const Pricing = () => {
 
                 {/* CTA Button */}
                 {pkg.popular ? (
-                  <span className="relative inline-block overflow-hidden rounded-full p-[1.5px] w-full">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                    <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
-                      <button
-                        onClick={scrollToContact}
-                        className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-4 px-6"
-                      >
-                        Get Started
-                      </button>
-                    </div>
-                  </span>
+                  <button
+                    onClick={scrollToContact}
+                    className="w-full py-3 px-6 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 text-white hover:opacity-90 transition-all duration-300"
+                  >
+                    Get Started
+                  </button>
                 ) : (
                   <button
                     onClick={scrollToContact}
