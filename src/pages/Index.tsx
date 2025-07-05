@@ -11,7 +11,7 @@ import ScrollTransition from "@/components/ScrollTransition";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="space-y-0">
       <Navigation />
       <Hero />
       <ScrollTransition />

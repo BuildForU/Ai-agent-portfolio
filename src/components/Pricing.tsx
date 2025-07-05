@@ -51,7 +51,7 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="relative py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black">
+    <section id="pricing" className="relative py-20">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.1),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))]" />
       
@@ -74,26 +74,13 @@ const Pricing = () => {
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`group relative transition-all duration-500 hover:-translate-y-2 ${
-                pkg.popular ? 'scale-105' : ''
-              }`}
+              className="group relative transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Static Border for Popular Package */}
-              {pkg.popular && (
-                <div className="absolute inset-0 rounded-2xl">
-                  <div className="absolute inset-[-2px] bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200 rounded-2xl" />
-                  <div className="absolute inset-0 bg-white dark:bg-gray-950 rounded-2xl" />
-                </div>
-              )}
               
-              <div className={`relative bg-gradient-to-tr from-zinc-300/5 via-gray-400/5 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 p-8 rounded-2xl border transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 ${
-                pkg.popular 
-                  ? 'border-purple-500/20 shadow-lg shadow-purple-500/20' 
-                  : 'border-black/5 dark:border-white/10 hover:border-purple-500/30'
-              }`}>
+              <div className={`relative bg-white/60 shadow-md text-gray-900 border border-gray-200 p-8 rounded-2xl transition-all duration-300 hover:shadow-lg backdrop-blur`}>
                 {/* Popular Badge */}
                 {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="mb-4 flex justify-center">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>

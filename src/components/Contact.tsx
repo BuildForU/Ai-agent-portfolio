@@ -24,7 +24,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black">
+    <section id="contact" className="relative py-20">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.1),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))]" />
       
@@ -93,8 +93,8 @@ const Contact = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="space-y-4">
-              <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <span className="relative inline-block overflow-hidden rounded-full p-[1.5px] w-full sm:w-auto">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
                   <button className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-3 px-8">
@@ -102,7 +102,7 @@ const Contact = () => {
                   </button>
                 </div>
               </span>
-              <button className="w-full sm:w-auto ml-0 sm:ml-4 py-3 px-8 rounded-full border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-tr hover:from-zinc-300/20 hover:via-purple-400/20 hover:to-transparent transition-all duration-300">
+              <button className="w-full sm:w-auto py-3 px-8 rounded-full border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-tr hover:from-zinc-300/20 hover:via-purple-400/20 hover:to-transparent transition-all duration-300">
                 WhatsApp Chat
               </button>
             </div>
@@ -175,7 +175,7 @@ const Contact = () => {
         </div>
 
         {/* Response Time Notice */}
-        <div className="text-center mt-12">
+        <div className="text-center">
           <p className="text-gray-500 dark:text-gray-400">
             I typically respond within 24 hours. For urgent projects, feel free to call directly.
           </p>

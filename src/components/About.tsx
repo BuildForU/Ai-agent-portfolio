@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section id="about" className="relative py-20 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950">
+    <section id="about" className="relative py-20">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 [background-image:linear-gradient(to_right,#80808012_1px,transparent_0),linear-gradient(to_bottom,#80808012_1px,transparent_0)] [background-size:24px_24px]" />
@@ -19,14 +19,14 @@ const About = () => {
             
             <div className="space-y-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p>
-                I'm <span className="text-purple-600 dark:text-purple-400 font-semibold">Likith</span> — an AI/ML engineer and full-stack developer based in India. I specialize in building automation systems, custom AI agents, and scalable tools for business workflows.
+                I'm <span className="text-purple-600 dark:text-purple-400 font-semibold">Likith Yadav</span> — an AI/ML engineer and full-stack developer based in India. I specialize in building automation systems, custom AI agents, and scalable tools for business workflows.
               </p>
               
               <p>
                 I've helped startups, creators, and technical teams implement real automation without bloated solutions. If you're spending time on repetitive work, I'll help you eliminate it with a fast, cost-efficient AI system.
               </p>
 
-              <div className="bg-white/70 dark:bg-gray-950/70 backdrop-blur-xl p-6 rounded-2xl border border-gray-200/50 dark:border-gray-800/50">
+              <div className="bg-white/60 shadow-md text-gray-900 border border-gray-200 p-6 rounded-2xl backdrop-blur">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">My Approach</h3>
                 <ul className="space-y-3">
                   {["Focus on real business impact, not just tech complexity", "Rapid prototyping and iterative development", "Clear communication and transparent pricing", "Long-term support and scalable solutions"].map((item, index) => (
@@ -42,7 +42,7 @@ const About = () => {
 
           {/* Profile Image Placeholder */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-80 bg-gradient-to-tr from-zinc-300/20 via-gray-400/20 to-transparent dark:from-zinc-300/5 dark:via-gray-400/5 rounded-2xl border border-gray-200/50 dark:border-gray-800/50 flex items-center justify-center backdrop-blur-xl">
+            <div className="w-80 h-80 bg-white/60 shadow-md text-gray-900 border border-gray-200 rounded-2xl flex items-center justify-center backdrop-blur">
               <div className="text-center">
                 <div className="w-20 h-20 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-4xl">👨‍💻</span>

@@ -1,29 +1,31 @@
+import { FaRobot, FaDatabase, FaComments, FaRocket } from "react-icons/fa";
+
 const TechStack = () => {
   const technologies = [
     {
       category: "AI & Automation",
       tools: ["n8n", "LangChain", "OpenAI", "Gemini Pro"],
-      icon: "🤖"
+      icon: <FaRobot />
     },
     {
       category: "Database & Storage",
       tools: ["Ollama", "Pinecone", "PostgreSQL", "Airtable"],
-      icon: "🗄️"
+      icon: <FaDatabase />
     },
     {
       category: "Communication",
       tools: ["Twilio", "ElevenLabs", "Clerk"],
-      icon: "📞"
+      icon: <FaComments />
     },
     {
       category: "Deployment",
       tools: ["Vercel", "Netlify", "Railway"],
-      icon: "🚀"
+      icon: <FaRocket />
     }
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950">
+    <section className="relative py-20">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 [background-image:linear-gradient(to_right,#80808025_1px,transparent_0),linear-gradient(to_bottom,#80808025_1px,transparent_0)] [background-size:48px_48px]" />
@@ -48,7 +50,7 @@ const TechStack = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group relative bg-white/70 dark:bg-gray-950/70 backdrop-blur-xl border border-gray-200/50 dark:border-gray-800/50 rounded-2xl p-6 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-2"
+              className="group relative bg-white/60 shadow-md text-gray-900 border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 backdrop-blur"
             >
               {/* Hover Gradient Border */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />

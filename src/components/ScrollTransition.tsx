@@ -2,7 +2,7 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 const ScrollTransition = () => {
   return (
-    <div className="relative bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950">
+    <div className="relative bg-transparent">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.1),rgba(255,255,255,0))] dark:bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.2),rgba(255,255,255,0))]" />
       

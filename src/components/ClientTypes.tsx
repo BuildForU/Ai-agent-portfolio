@@ -1,34 +1,41 @@
+import { FaHospitalAlt, FaShoppingCart, FaRocket, FaBook, FaStar, FaBriefcase } from "react-icons/fa";
+
 const ClientTypes = () => {
   const clientTypes = [
     {
       type: "Healthcare professionals and coaches",
       description: "Automate bookings, reminders, and post-session follow-ups",
-      icon: "🏥"
+      icon: <FaHospitalAlt />
     },
     {
       type: "Ecommerce businesses", 
       description: "Order support, cart recovery flows, and customer assistance bots",
-      icon: "🛒"
+      icon: <FaShoppingCart />
     },
     {
       type: "Agencies and startups",
       description: "Lead qualification, outreach automation, and internal support bots", 
-      icon: "🚀"
+      icon: <FaRocket />
     },
     {
       type: "Educators and trainers",
       description: "Automate student query handling and resource delivery",
-      icon: "📚"
+      icon: <FaBook />
     },
     {
       type: "Freelancers and creators",
       description: "Build productivity-focused AI agents to save time",
-      icon: "✨"
+      icon: <FaStar />
+    },
+    {
+      type: "Small & Medium Businesses",
+      description: "Streamline operations, customer support, and marketing with tailored AI automation solutions",
+      icon: <FaBriefcase />
     }
   ];
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950">
+    <section className="relative py-20">
       {/* Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 [background-image:linear-gradient(to_right,#80808012_1px,transparent_0),linear-gradient(to_bottom,#80808012_1px,transparent_0)] [background-size:24px_24px]" />
@@ -53,7 +60,7 @@ const ClientTypes = () => {
           {clientTypes.map((client, index) => (
             <div
               key={index}
-              className="group relative bg-white/70 dark:bg-gray-950/70 backdrop-blur-xl border border-gray-200/50 dark:border-gray-800/50 rounded-2xl p-8 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 hover:-translate-y-1"
+              className="group relative bg-white/60 shadow-md text-gray-900 border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 backdrop-blur"
             >
               {/* Hover Gradient Border */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
