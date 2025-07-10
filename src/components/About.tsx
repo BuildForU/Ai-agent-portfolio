@@ -40,17 +40,15 @@ const About = () => {
             </div>
           </div>
 
-          {/* Profile Image Placeholder */}
+          {/* Profile Image */}
           <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-80 bg-white/60 shadow-md text-gray-900 border border-gray-200 rounded-2xl flex items-center justify-center backdrop-blur">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-4xl">👨‍💻</span>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Professional<br />Portrait Coming Soon
-                </p>
-              </div>
+            <div className="w-80 h-80 bg-white/60 shadow-md text-gray-900 border border-gray-200 rounded-2xl flex flex-col items-center justify-center backdrop-blur p-6">
+              <img
+                src="/images/myphoto.png"
+                alt="Likith Yadav"
+                className="rounded-full w-40 h-40 object-cover mx-auto mb-4 border-4 border-purple-200 shadow"
+              />
+              <p className="text-gray-900 dark:text-white font-semibold text-lg mt-2">Likith Yadav</p>
             </div>
           </div>
         </div>
@@ -58,8 +56,8 @@ const About = () => {
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: "3+", label: "Years Experience" },
-            { number: "50+", label: "Projects Completed" },
+            { number: "1+", label: "Years Experience" },
+            { number: "15+", label: "Projects Completed" },
             { number: "95%", label: "Client Satisfaction" },
             { number: "24h", label: "Avg Response Time" }
           ].map((stat, index) => (

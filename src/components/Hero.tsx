@@ -1,16 +1,13 @@
 import { HeroSection } from "@/components/ui/hero-section";
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleCtaClick = () => {
+    window.open('https://cal.me/likith-yadav', '_blank');
   };
 
   return (
     <HeroSection
-      className="min-h-screen pt-16"
+      className="pt-16 pb-0"
       title="AI Automation Developer"
       subtitle={{
         regular: "I Build AI-Powered ",
@@ -18,7 +15,7 @@ const Hero = () => {
       }}
       description="I specialize in building custom AI bots, automation workflows, and smart assistants using tools like n8n, LangChain, and LLMs — so businesses can scale operations without scaling workload."
       ctaText="Book a Free Automation Audit Call"
-      onCtaClick={scrollToContact}
+      onCtaClick={handleCtaClick}
       gridOptions={{
         angle: 65,
         cellSize: 60,

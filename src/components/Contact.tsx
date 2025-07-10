@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,10 +12,28 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, you would handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
+    emailjs.send(
+      'service_0pv4yai', // <-- Replace with your EmailJS service ID
+      'template_an0e2ie', // <-- Replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'Fiml2KAYJdg4hu-iS' // <-- Replace with your EmailJS public key
+    ).then(() => {
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I will get back to you within 24 hours.",
+      });
+      setFormData({ name: '', email: '', message: '' });
+    }).catch(() => {
+      toast({
+        title: "Message Failed",
+        description: "There was an issue sending your message. Please try again or contact me directly.",
+        variant: "destructive"
+      });
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -59,7 +79,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Email</p>
-                    <p className="text-gray-600 dark:text-gray-300">likith@example.com</p>
+                    <p className="text-gray-600 dark:text-gray-300">likithyadavgn@gmail.com</p>
                   </div>
                 </div>
 
@@ -72,7 +92,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Phone</p>
-                    <p className="text-gray-600 dark:text-gray-300">+91 XXXXXXXXXX</p>
+                    <p className="text-gray-600 dark:text-gray-300">+91 8792518851</p>
                   </div>
                 </div>
 
@@ -86,7 +106,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-gray-900 dark:text-white font-semibold">Location</p>
-                    <p className="text-gray-600 dark:text-gray-300">India (Remote & Global Projects)</p>
+                    <p className="text-gray-600 dark:text-gray-300">Bangalore,India (Remote & Global Projects)</p>
                   </div>
                 </div>
               </div>
@@ -97,12 +117,18 @@ const Contact = () => {
               <span className="relative inline-block overflow-hidden rounded-full p-[1.5px] w-full sm:w-auto">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <div className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white dark:bg-gray-950 text-xs font-medium backdrop-blur-3xl">
-                  <button className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-3 px-8">
+                  <button 
+                    className="inline-flex rounded-full text-center group items-center w-full justify-center bg-gradient-to-tr from-zinc-300/20 via-purple-400/30 to-transparent dark:from-zinc-300/5 dark:via-purple-400/20 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 border-[1px] hover:bg-gradient-to-tr hover:from-zinc-300/30 hover:via-purple-400/40 hover:to-transparent dark:hover:from-zinc-300/10 dark:hover:via-purple-400/30 transition-all py-3 px-8"
+                    onClick={() => window.open('https://cal.com/likithyadav', '_blank')}
+                  >
                     Book a Call
                   </button>
                 </div>
               </span>
-              <button className="w-full sm:w-auto py-3 px-8 rounded-full border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-tr hover:from-zinc-300/20 hover:via-purple-400/20 hover:to-transparent transition-all duration-300">
+              <button 
+                className="w-full sm:w-auto py-3 px-8 rounded-full border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white hover:bg-gradient-to-tr hover:from-zinc-300/20 hover:via-purple-400/20 hover:to-transparent transition-all duration-300"
+                onClick={() => window.open('https://wa.me/918792518851', '_blank')}
+              >
                 WhatsApp Chat
               </button>
             </div>

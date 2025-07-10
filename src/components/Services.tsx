@@ -2,28 +2,23 @@ const Services = () => {
   const services = [
     {
       title: "AI Assistant Bots",
-      description: "Custom chatbots that handle bookings, support queries, and knowledge-based questions, trained on your business data.",
-      icon: "🤖"
+      description: "Custom chatbots that handle bookings, support queries, and knowledge-based questions, trained on your business data."
     },
     {
       title: "n8n Workflow Automation",
-      description: "End-to-end workflows to automate repetitive tasks like emails, CRM updates, form handling, and more.",
-      icon: "⚡"
+      description: "End-to-end workflows to automate repetitive tasks like emails, CRM updates, form handling, and more."
     },
     {
       title: "LangChain RAG Agents",
-      description: "Intelligent bots that search and answer questions from your internal documents (PDFs, Notion, Drive).",
-      icon: "🧠"
+      description: "Intelligent bots that search and answer questions from your internal documents (PDFs, Notion, Drive)."
     },
     {
       title: "Voice AI Agents",
-      description: "AI voice assistants using Twilio and ElevenLabs for smart call-based interactions.",
-      icon: "🎤"
+      description: "AI voice assistants using Twilio and ElevenLabs for smart call-based interactions."
     },
     {
       title: "Lead Generation & CRM Sync",
-      description: "AI-based data scrapers that qualify leads and update CRMs automatically.",
-      icon: "📊"
+      description: "AI-based data scrapers that qualify leads and update CRMs automatically."
     },
   ];
 
@@ -57,9 +52,6 @@ const Services = () => {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" />
               
               {/* Icon */}
-              <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
-              </div>
               
               {/* Content */}
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-500 dark:group-hover:from-purple-300 dark:group-hover:to-orange-200 transition-all duration-300">
