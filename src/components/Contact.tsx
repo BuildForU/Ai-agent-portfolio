@@ -13,14 +13,14 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     emailjs.send(
-      'service_0pv4yai', // <-- Replace with your EmailJS service ID
-      'template_an0e2ie', // <-- Replace with your EmailJS template ID
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
       {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
       },
-      'Fiml2KAYJdg4hu-iS' // <-- Replace with your EmailJS public key
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     ).then(() => {
       toast({
         title: "Message Sent!",
