@@ -40,19 +40,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-80 bg-white/60 shadow-md text-gray-900 border border-gray-200 rounded-2xl flex flex-col items-center justify-center backdrop-blur p-6">
-              <img
-                src="/images/myphoto.png"
-                alt="Likith Yadav"
-                className="rounded-full w-40 h-40 object-cover mx-auto mb-4 border-4 border-purple-200 shadow"
-              />
-              <p className="text-gray-900 dark:text-white font-semibold text-lg mt-2">Likith Yadav</p>
-            </div>
-          </div>
-        </div>
-
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
